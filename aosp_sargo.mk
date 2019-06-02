@@ -20,6 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 $(call inherit-product, device/google/bonito/device-sargo.mk)
 $(call inherit-product-if-exists, vendor/google_devices/bonito/proprietary/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
 
 PRODUCT_PACKAGES += \
     Dialer \
@@ -30,10 +31,16 @@ PRODUCT_PACKAGES += \
 # PRODUCT_RESTRICT_VENDOR_FILES := all
 
 PRODUCT_MANUFACTURER := Google
-PRODUCT_BRAND := Android
-PRODUCT_NAME := aosp_sargo
+PRODUCT_BRAND := Google
+PRODUCT_NAME := sargo
 PRODUCT_DEVICE := sargo
-PRODUCT_MODEL := AOSP on sargo
+PRODUCT_MODEL := Pixel 3a
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_DISPLAY_ID="PiePie-$(BUILD_ID)"
+    PRODUCT_NAME=bonito \
+    BUILD_FINGERPRINT=google/sargo/sargo:9/PD2A.190115.032/5340326:user/release-keys \
+    PRIVATE_BUILD_DESC="sargo-user 9 PD2A.190115.032 5340326 release-keys"
 
 # Audio XMLs
 PRODUCT_COPY_FILES += \

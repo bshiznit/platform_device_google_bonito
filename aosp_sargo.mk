@@ -32,13 +32,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := Google
-PRODUCT_NAME := sargo
+PRODUCT_NAME := aosp_sargo
 PRODUCT_DEVICE := sargo
 PRODUCT_MODEL := Pixel 3a
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_DISPLAY_ID="PiePie-$(BUILD_ID)"
-    PRODUCT_NAME=bonito \
+    BUILD_DISPLAY_ID="PiePie-$(BUILD_ID)" \
+    PRODUCT_NAME=sargo \
     BUILD_FINGERPRINT=google/sargo/sargo:9/PD2A.190115.032/5340326:user/release-keys \
     PRIVATE_BUILD_DESC="sargo-user 9 PD2A.190115.032 5340326 release-keys"
 

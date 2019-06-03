@@ -97,6 +97,12 @@ persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 PRODUCT_COPY_FILES += \
     device/google/bonito/init.logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.$(PRODUCT_PLATFORM).logging.rc
 
+# Telephony updates
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml \
+    $(LOCAL_PATH)/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml \
+    $(LOCAL_PATH)/prebuilt/common/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
+
 # Dumpstate HAL
 PRODUCT_PACKAGES += \
     android.hardware.dumpstate@1.0-service.bonito

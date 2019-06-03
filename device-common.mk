@@ -103,6 +103,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml \
     $(LOCAL_PATH)/prebuilt/common/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
 
+# Stock boot ani
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
+
 # Dumpstate HAL
 PRODUCT_PACKAGES += \
     android.hardware.dumpstate@1.0-service.bonito
